@@ -1,0 +1,16 @@
+{
+  "name": "flames-calculator",
+  "version": "1.0.0",
+  "description": "A Node.js application to calculate FLAMES between two names",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "cli": "node index.js"
+  },
+  "keywords": ["flames", "relationship", "calculator"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

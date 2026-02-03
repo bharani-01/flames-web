@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES Calculator - Find Your Relationship!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔥 FLAMES Calculator 🔥</h1>
+            <p class="subtitle">Discover the relationship between two names!</p>
+        </div>
+
+        <div class="flames-legend">
+            <div class="legend-item">
+                <span class="legend-letter f">F</span>
+                <span class="legend-text">Friends</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-letter l">L</span>
+                <span class="legend-text">Lovers</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-letter a">A</span>
+                <span class="legend-text">Affection</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-letter m">M</span>
+                <span class="legend-text">Marriage</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-letter e">E</span>
+                <span class="legend-text">Enemies</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-letter s">S</span>
+                <span class="legend-text">Siblings</span>
+            </div>
+        </div>
+
+        <div class="calculator-box">
+            <form id="flamesForm">
+                <div class="input-group">
+                    <label for="name1">First Name</label>
+                    <input 
+                        type="text" 
+                        id="name1" 
+                        placeholder="Enter first name" 
+                        required
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="heart-divider">
+                    <span>💕</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="name2">Second Name</label>
+                    <input 
+                        type="text" 
+                        id="name2" 
+                        placeholder="Enter second name" 
+                        required
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button type="submit" class="btn-calculate">
+                    Calculate FLAMES
+                </button>
+            </form>
+
+            <div id="error" class="error-message"></div>
+
+            <div id="result" class="result-container">
+                <div class="result-header">
+                    <h2>Result</h2>
+                </div>
+                <div class="result-content">
+                    <div class="result-names">
+                        <span id="resultName1" class="result-name"></span>
+                        <span class="result-separator">💖</span>
+                        <span id="resultName2" class="result-name"></span>
+                    </div>
+                    <div class="result-relationship">
+                        <div class="result-letter" id="resultLetter"></div>
+                        <div class="result-text" id="resultText"></div>
+                    </div>
+                    <div class="result-details">
+                        <p>Remaining Characters: <span id="resultCount"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ for fun | FLAMES is just a game!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
