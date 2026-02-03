@@ -38,9 +38,9 @@ app.post('/api/calculate', (req, res) => {
   }
 });
 
-// Start server
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
+// Start server (only when not on Vercel)
+if (!process.env.VERCEL) {
+  const server = app.listen(PORT, () => {
     console.log(`\n🔥 FLAMES Calculator Server Running! 🔥`);
     console.log(`📡 Server: http://localhost:${PORT}`);
     console.log(`\nPress Ctrl+C to stop the server\n`);
