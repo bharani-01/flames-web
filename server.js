@@ -39,8 +39,13 @@ app.post('/api/calculate', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`\n🔥 FLAMES Calculator Server Running! 🔥`);
-  console.log(`📡 Server: http://localhost:${PORT}`);
-  console.log(`\nPress Ctrl+C to stop the server\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🔥 FLAMES Calculator Server Running! 🔥`);
+    console.log(`📡 Server: http://localhost:${PORT}`);
+    console.log(`\nPress Ctrl+C to stop the server\n`);
+  });
+}
+
+// Export for Vercel
+module.exports = app;
